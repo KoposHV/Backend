@@ -6,6 +6,10 @@ const Country = require("./models/country.model");
 
 const server = express();
 
+server.use(express.json());
+
+server.use(express.urlencoded({ extended: false }));
+
 connect();
 
 const router = express.Router();
